@@ -83,9 +83,3 @@ def addpost():
 
 if __name__ == '__main__':
     app.run(debug=True)
-
-# inscriptTERMINAL
-# date = datetime.now()
-# print(date)
-
-sqlite3
