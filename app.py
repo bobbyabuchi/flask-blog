@@ -32,7 +32,7 @@ class Blogpost(db.Model):
     date = db.Column(db.DateTime)
     content = db.Column(db.Text)
 
-# So when you're done with the block of code above, get into the terminal and do...to create the table and columns we alread specified
+# So when you're done with the block of code above, get into the terminal and do...to create the table and columns we already specified
 # >>> python3
 # >>> from app import db
 # >>> db.create_all()
