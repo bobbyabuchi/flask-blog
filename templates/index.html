@@ -4,7 +4,7 @@
 		<!-- Required meta tags -->
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-		<title>Greatwhile | Education Technology</title>
+		<title>Greatwhile | Home</title>
 		<!-- base:css -->
 		<link rel="stylesheet" href="static/vapour/bootstrap.css">
 		<link rel="stylesheet" href="static/vapour/bootstrap.min.css">
@@ -21,15 +21,22 @@
 		<div class="container-fluid">
 			<div class="row">
 				<div class="col-sm-12" style="background-color: black;">
-					<h5>Greatwhile</h5>
-					<p>Resize the browser window to see the effect.</p>
+					<!-- <h5>g r e a t w h i l e</h5> -->
+					<a href="/">
+						<img src="/static/images/logo.png">
+					</a>
+					<p>building and changing lives</p>
 					<div class="btn-group-horizontal">
-						<a type="button" class="btn btn-sm btn-primary">Developer</a> | 
-						 <a type="button" class="btn btn-sm btn-primary">DevOps</a> | 
-						 <a type="button" class="btn btn-sm btn-primary">Data Analytics</a> | 
-						 <a type="button" class="btn btn-sm btn-primary">Software Engineering</a> | 
-						 <a type="button" class="btn btn-sm btn-primary">Cloud</a> | 
-						 <a type="button" class="btn btn-sm btn-primary">CyberSecurity</a>
+						<a type="button" href="/" class="btn btn-sm btn-dark">Home</a>
+						<a type="button" class="btn btn-sm btn-dark">Developer</a> 
+						<a type="button" class="btn btn-sm btn-dark">DevOps</a> 
+						<a type="button" class="btn btn-sm btn-dark">Data Analytics</a> 
+						<a type="button" class="btn btn-sm btn-dark">Software Engineering</a> 
+						<a type="button" class="btn btn-sm btn-dark">Cloud</a> 
+						<a type="button" class="btn btn-sm btn-dark">CyberSecurity</a>
+						<a type="button" href="/add" class="btn btn-sm btn-dark">Add Post</a> 
+						<a type="button" href="/contact" class="btn btn-sm btn-dark">Contact</a> 
+						<a type="button" href="/about" class="btn btn-sm btn-dark">About</a> 
 					</div>
 				</div>
 			</div>
@@ -42,10 +49,10 @@
 							<div class="card border-primary mb-3" style="max-width: 200rem;">
 								<h4 class="card-header">{{ item.title }}</h4>
 								<div class="card-body">
-									<h6 class="card-title">{{ item.subtitle }}</h6>
+									<h6 class="card-title">{{ item.subtitle }} | {{ item.category }}</h6>
 									<div class="card-text">
 										<p>By {{ item.author }}, {{ item.date.strftime('%B %d, %Y') }}</p>
-										<p>{{ item.date_posted }}</p>
+										<!-- <p>{{ item.date_posted }}</p> -->
 										<p>{{ item.content }}</p>
 									</div>
 								</div>
@@ -55,13 +62,7 @@
 					</div>
 				</div>
 				<div class="col-sm-4">
-					<ul class="card">
-						<li><a href="/">Home</a></li>
-						<li><a href="/add">Add</a></li>
-						<li><a href="/post/2">Posts</a></li>
-						<li><a href="/contact">Contact</a></li>
-						<li><a href="/about">About</a></li>
-					</ul>
+					sidebar
 				</div>
 			</div>
 			<div class="row">

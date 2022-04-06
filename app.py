@@ -1,4 +1,6 @@
+from nis import cat
 import sqlite3
+from unicodedata import category
 from flask import Flask, render_template, request, redirect, url_for
 from flask_sqlalchemy import SQLAlchemy
 # import python datetime object
@@ -30,6 +32,7 @@ class Blogpost(db.Model):
     subtitle = db.Column(db.String(60))
     author = db.Column(db.String(60)) 
     date = db.Column(db.DateTime)
+    category = db.Column(db.String(30))
     content = db.Column(db.Text)
 
 # So when you're done with the block of code above, get into the terminal and do...to create the table and columns we already specified
@@ -75,11 +78,12 @@ def addpost():
     title = request.form['title']
     subtitle = request.form['subtitle']
     author = request.form['author']
+    category = request.form['category']
     content = request.form['content']
     # used this return for testing
     # return '<h1>Title: {} Subtitle: {} Author: {} Content: {}</h1>'.format(title, subtitle, author, content, date=datetime.now())
 
-    post = Blogpost(title=title, subtitle=subtitle, author=author, content=content, date=datetime.now())
+    post = Blogpost(title=title, subtitle=subtitle, author=author, category=category,  content=content, date=datetime.now())
 
     db.session.add(post)
     db.session.commit()
